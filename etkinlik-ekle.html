@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Ekle</title>
+    <link rel="stylesheet" href="css/numaran.css">
+    <style>
+      :root { --no: 2416501041; --ton: 321; --renk-ana: hsl(321, 65%, 38%); --renk-zemin: hsl(321, 30%, 97%); --font: Verdana, sans-serif; --bosluk-m: 1rem; --kose: 8px; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: var(--font); background-color: var(--renk-zemin); color: #111111; line-height: 1.5; padding-bottom: 2rem; }
+      header { background-color: var(--renk-ana); color: #ffffff; padding: var(--bosluk-m); margin-bottom: var(--bosluk-m); }
+      header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+      nav { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+      nav a { color: #ffffff; text-decoration: underline; font-size: 1rem; }
+      nav a:hover { opacity: 0.85; }
+      main { max-width: 1000px; margin: 0 auto; padding: 0 var(--bosluk-m); }
+      form.event-form { display: flex; flex-direction: column; gap: var(--bosluk-m); max-width: 480px; }
+      .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+      .form-group label { font-weight: bold; font-size: 0.95rem; }
+      .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.6rem; border: 1px solid #cccccc; border-radius: var(--kose); font-family: inherit; font-size: 1rem; background-color: #ffffff; }
+      .form-group input.error, .form-group input:invalid:focus { border: 1px solid #d93025; color: #d93025; }
+      button.btn-submit { background-color: var(--renk-ana); color: #ffffff; border: none; padding: 0.7rem 1.5rem; border-radius: var(--kose); font-size: 1rem; font-weight: bold; cursor: pointer; align-self: flex-start; }
+      button.btn-submit:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Etkinlik Ekle</h1>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="etkinlik-ekle.html">Ekle</a>
+            <a href="etkinlik-guncelle.html">Güncelle</a>
+        </nav>
+    </header>
+
+    <main>
+        <form class="event-form" action="#" method="post">
+            <div class="form-group">
+                <label for="etkinlik-adi">Etkinlik adı</label>
+                <input type="text" id="etkinlik-adi" name="etkinlik-adi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kategori">Kategori</label>
+                <select id="kategori" name="kategori" required>
+                    <option value="">Seçiniz ▾</option>
+                    <option value="seminer">Seminer</option>
+                    <option value="atolye">Atölye</option>
+                    <option value="soylesi">Söyleşi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tarih">Tarih</label>
+                <input type="text" id="tarih" name="tarih" class="error" value="boş bırakıldı" required>
+            </div>
+
+            <div class="form-group">
+                <label for="aciklama">Açıklama</label>
+                <textarea id="aciklama" name="aciklama" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Kaydet</button>
+        </form>
+    </main>
+
+</body>
+</html>

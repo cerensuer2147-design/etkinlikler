@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampüs Etkinlikleri - Ana Sayfa</title>
+    <link rel="stylesheet" href="css/numaran.css">
+    <style>
+      :root { --no: 2416501041; --ton: 321; --renk-ana: hsl(321, 65%, 38%); --renk-zemin: hsl(321, 30%, 97%); --font: Verdana, sans-serif; --bosluk-m: 1rem; --kose: 8px; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: var(--font); background-color: var(--renk-zemin); color: #111111; line-height: 1.5; padding-bottom: 2rem; }
+      header { background-color: var(--renk-ana); color: #ffffff; padding: var(--bosluk-m); margin-bottom: var(--bosluk-m); }
+      header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+      nav { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+      nav a { color: #ffffff; text-decoration: underline; font-size: 1rem; }
+      nav a:hover { opacity: 0.85; }
+      main { max-width: 1000px; margin: 0 auto; padding: 0 var(--bosluk-m); }
+      main h2 { font-size: 1.3rem; margin-bottom: var(--bosluk-m); color: #111111; }
+      .intro-text { font-size: 1.05rem; margin-bottom: 1.2rem; color: #333333; }
+      section.cards-grid { display: grid; grid-template-columns: 1fr; gap: var(--bosluk-m); margin-bottom: var(--bosluk-m); }
+      @media (min-width: 650px) { section.cards-grid.two-cols { grid-template-columns: repeat(2, 1fr); } }
+      article.card { background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.08); border-radius: var(--kose); padding: var(--bosluk-m); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; justify-content: space-between; }
+      article.card h3 { font-size: 1.15rem; margin-bottom: 0.4rem; color: #111111; }
+      article.card p { color: #444444; font-size: 0.95rem; margin-bottom: 0.3rem; }
+      article.card a.card-link { color: var(--renk-ana); font-weight: bold; text-decoration: none; margin-top: 0.8rem; display: inline-block; }
+      article.card a.card-link:hover { text-decoration: underline; }
+      a.action-link { color: var(--renk-ana); font-weight: bold; text-decoration: none; }
+      a.action-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kampüs Etkinlikleri</h1>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="etkinlik-ekle.html">Ekle</a>
+            <a href="etkinlik-guncelle.html">Güncelle</a>
+        </nav>
+    </header>
+
+    <main>
+        <p class="intro-text">Fakültedeki seminer, atölye ve söyleşileri tek yerden takip edin.</p>
+
+        <h2>Yaklaşan 2 etkinlik</h2>
+
+        <section class="cards-grid two-cols">
+            <article class="card">
+                <h3>Kariyer Günleri</h3>
+                <p>12 Ekim</p>
+                <a href="etkinlik-detay.html" class="card-link">Detay →</a>
+            </article>
+
+            <article class="card">
+                <h3>Robotik Atölyesi</h3>
+                <p>20 Ekim</p>
+                <a href="etkinlik-detay.html" class="card-link">Detay →</a>
+            </article>
+        </section>
+
+        <p><a href="etkinlikler.html" class="action-link">Tüm etkinlikleri gör →</a></p>
+    </main>
+
+</body>
+</html>
