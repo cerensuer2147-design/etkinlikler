@@ -1,1 +1,1 @@
-https://etkinlikler1.vercel.app/
+https://etkinlikler-7wn3.vercel.app/
